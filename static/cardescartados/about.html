@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="import" href="portazo.html">
+
+    <title>About</title>
+
+</head>
+<body>
+    <h1 id="text">About</h1>
+    <p>
+    Golang is an open source programming language which allows you to build simple, reliable, and efficient applications.
+    </p>
+    <p>
+        <a href="/">Back to Home</a>
+    </p>
+     
+    <script>
+        var vhtml = document.querySelector("link[rel='import']").import;
+        var vtext = vhtml.getElementById("text");
+        dolucment.body.appendChild(vtext.cloneNode(true));
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+

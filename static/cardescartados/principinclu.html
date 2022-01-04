@@ -1,0 +1,183 @@
+<html lang="es">
+<head>
+    <!--    M  E  T  A  S    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--    S  C  R  I  P  T  S   -->
+    <script>
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /*loop through a collection of all HTML elements:*/
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+              /*make an HTTP request using the attribute value as the file name:*/
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /*remove the attribute, and call this function once more:*/
+                  elmnt.removeAttribute("w3-include-html");
+                  includeHTML();
+                }
+              }      
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /*exit the function:*/
+              return;
+            }
+          }
+        };
+        </script>
+
+
+    <!--    L  I  N  K  S    -->
+    <link rel="stylesheet" href="../carestilos/estiprincipal.css">
+    <link href="//fonts.googleapis.com/css?family=Great Vibes&subset=latin" rel="stylesheet" type="text/css">
+    <!--    T  I  T  U  L  O    -->
+    <title> Sobre esta web </title>
+
+</head>
+<body>
+
+<!--   C  A  B  E  C  E  R  A   -->   
+
+    <div class="contenedor">
+
+        
+        <div w3-include-html="carsecciones/cabecera.html" class="header" id="idheader"></div>
+
+        <script>
+            includeHTML();
+        </script>
+
+
+        <div w3-include-html="carsecciones/menu.html" class="nav">   
+               
+        </div>   <!--   class nav   -->       
+
+
+        <div w3-include-html="carsecciones/contenidocentral.html" class="main">
+            
+            
+        </div>        <!-- class main   -->
+
+        <div class="aside">
+            
+            <h2>Sección de servicios accesorios</h2>
+
+            <ul>
+                <h2 >
+                    <li class="deco"><a href="carcomplementos/cuentalo.html" >Cuéntalo</a></li>
+                    <li class="deco"><a href="carcomplementos/participa.html" >Participa</a></li>
+
+                    <li class="deco"><a href="carcomplementos/cajondesastre.html" >Cajón de sastre</a></li>
+                    <li class="deco"><a href="carcomplementos/sobreweb.html" >Información de la web </a></li>
+                </h2>
+            </ul>
+
+            <h3>Aquí se mostrarán los artículos más vistos y
+                la publicidad oportuna en cada caso
+            </h3>
+           <!--
+            <div class="slideshow-container">
+        </br></br><h4>Album fotos 1</h4>
+        <div class="mySlides1">
+            <img src="carmaterial/carimagenes/IMG_20210314_143140.jpg">
+        </div>
+
+        <div class="mySlides1">
+            <img src="carmaterial/carimagenes/IMG_20210314_143654.jpg">
+        </div>
+
+        <div class="mySlides1">
+            <img src="carmaterial/carimagenes/IMG_20210314_143825.jpg">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 0)">&carestancias/ventanas.html10094;</a>
+        <a class="next" onclick="plusSlides(1, 0)">&carestancias/ventanas.html10095;</a>
+        </br></br>
+            </div>
+
+            <div class="slideshow-container">
+        <h4>Album fotos 2</h4>
+        
+        <div class="mySlides2">
+            
+            <img src="carmaterial/carimagenes/IMG_20210314_150551.jpg" >
+        </div>
+
+        <div class="mySlides2">
+                            
+            <img src="carmaterial/carimagenes/IMG_20210314_150400.jpg" width=auto height=auto>
+        </div>
+
+        <div class="mySlides2">
+            
+            <img src="carmaterial/carimagenes/IMG_20210314_144903.jpg" width=auto height=auto>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 1)">&carestancias/ventanas.html10094;</a>
+        <a class="next" onclick="plusSlides(1, 1)">&carestancias/ventanas.html10095;</a>
+            </div> <!-- cl slideshow-container -->
+
+        </div>  <!--   class aside    -->
+
+    </div>  <!--   class contenedor    -->
+
+
+    <script>
+        //When the scrools down 50 px from the top of the document, resize the header's
+        // font size
+        window.onscroll=function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop>50) {
+                document.getElementById("idheader").style.fontSize = "0.3em";
+                document.getElementById("idheader").style.padding = "0";
+                document.getElementById("idheader").style.margin = "0";
+                /*document.getElementById("idheader").style.height = "30px";*/
+                /*document.getElementById("idheader").innerHTML="micasitademuñecas.net";*/
+                /*document.getElementById("idheader").style.height ="20px";
+
+                /**/
+                /*document.getElementById("idimg").style.width="30px";*/
+                /*document.getElementById("idimg").style.height="20px";*/
+
+                /*document.getElementById("idimg").style.padding="0";*/
+
+            } else {
+                document.getElementById("idheader").style.fontSize = "1em";
+                /*document.getElementById("idheader").innerHTML="micasitademuñecas.net";*/
+            }
+        }  
+
+        function fbusqueda() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("mySearch");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myMenu");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }    
+        
+        
+    </script>
+
+</body>
+
+
+</html>

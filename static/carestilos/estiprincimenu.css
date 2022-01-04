@@ -1,0 +1,493 @@
+:root {
+    /*
+    --color-fondo: rgb(250, 190, 200);
+    
+    
+    --col-fon-subcont: rgb(59, 21, 16);
+    */
+    --color-fondo: rgb(250, 190, 200);
+    --col-fondo-cont: rgb(112, 19, 7);
+    --col-texto: rgb(247, 199, 144);
+    --col-fon-subcont: rgb(94, 35, 27);
+    --col-fon-articulo:rgb(248, 203, 120);
+    --col-tex-activo: rgb(252, 89, 89);
+}
+
+* {/*box-sizing: border-box;*/
+    margin: 0;
+    padding: 0;
+    font-family: 'Great Vibes', sans-serif;
+}
+
+body{
+    background-color: var(--col-fondo);
+    font-size: 1.4em;
+    /*display: grid;*/
+    transition: background-color .5s;
+    
+    
+}
+
+/*    R  E  G  I  L  L  A    */
+
+
+.contenedor {
+    display: grid;
+    grid-gap: 0.1%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:    "header header   header  header  header"
+                            "main   main     main    main    aside";
+    text-align: center;
+    /*position: relative;*/
+}
+
+.contenedor .conmenu {
+    display: grid;
+    grid-gap: 1%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:    "header header   header  header  header"
+                            "nav   main     main    main    aside";
+    text-align: center;
+    /*margin-left: 200px;*/
+    /*position: relative;*/
+
+}
+
+/*    C  A  B  E  C  E  R  A    */
+.contenedor .header {
+    display: grid;
+    /*background: #ff8000;*/
+    /*grid-column-start: header;
+    grid-column-end: header;*/
+    grid-area: header;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:    "logotipo nombre-web nombre-web nombre-web comparte";
+                            
+    position: sticky;
+    top: 0;
+    
+    padding: 0.2%;
+    background: var(--col-fon-subcont);
+    
+}
+
+.contenedor .header .logotipo {
+    
+    grid-area: logotipo;
+    /*padding: 0.1%;*/
+    /*background-color: var(--col-fon-subcont);*/
+    /*float: left;*/
+}
+
+.contenedor .header .nombre-web {
+    
+    grid-area: nombre-web;
+    /*padding: 2%;*/
+    color: var(--col-texto);
+    font-size: 1.6em;
+    /*width: auto;*/
+
+}
+
+.contenedor .header .comparte {
+    background: var(--col-fon-subcont);
+    grid-area: comparte;
+    padding: 0;
+    /*width: 11%;*/
+    box-shadow: 4px 10px 10px 4px rgb(245, 223, 96), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /*margin-bottom: 5px;*/
+    float: right;
+    color: var(--col-texto);
+    
+    
+}
+
+.contenedor .header .comparte .texto {
+    text-align: center;
+    padding: 7px 2px 0px;
+    font-size: 1.6em;
+}
+
+.contenedor .header .comparte a {
+    text-decoration: none;
+    color: var(--col-texto);
+}
+
+.contenedor .header .nombre-web h3 {
+    text-align: right;
+    margin-right: 25%;
+    /*display: block;*/
+}
+
+.contenedor .header .nombre-web p {
+    text-align: left;
+    margin-left: 20%;
+}
+
+.contenedor .header .nombre-web a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--col-texto);
+}
+
+.contenedor .header span {
+    /*position: fixed;*/
+    display: block;
+    margin-left: 35%;
+    margin-top: 4%;
+    /*top: 25%;*/
+    background-color: var(--col-fon-subcont);
+    color: var(--col-texto);
+    width: 30%;
+    box-shadow: 4px 10px 10px 4px rgb(245, 223, 96), 0 6px 20px 0 rgb(94, 35, 27);
+    /*text-shadow: 3px 3px rgb(245, 223, 96);*/
+    padding: 0.1%;
+}
+
+
+/*    M  E  N  U    N  A  V  E  G  A  C  I  O  N    */
+
+.contenedor .main .nav {
+    /*background: green;*/
+    grid-area: nav;
+    /*background-color:rgb(246, 244, 243);*/
+    background-image: url(../carmaterial/carimagenes/fondo.jpg);
+    background-attachment: fixed;
+    
+    color: var(--col-fon-subcont);
+    margin: 0.2%;
+    /*height: 100%;*/
+    /*width: 0px;*/
+    display: none;
+    height: 80%;
+    position: absolute;
+    z-index: 1;
+    top: -10%;
+    /*left: 0px;*/
+    
+    
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.contenedor .main .navvisible {
+    /*background: green;*/
+    grid-area: nav;
+    /*background-color:rgb(246, 244, 243);*/
+    background-image: url(../carmaterial/carimagenes/fondo.jpg);
+    background-attachment: fixed;
+    display: block;
+    color: var(--col-fon-subcont);
+    margin: .5%;
+    padding: 2%;
+    min-height: 500px;
+    width: 250px;
+    /*margin-left: 250px;*/
+    position: fixed;
+    height: 100%;
+    /*position:relative;*/
+    z-index: 1;
+    top: 23.5%;
+    left: 0.2%;
+
+    overflow-x: hidden;
+    transition: 0.5s;
+    /*padding-top: 60px;*/
+}
+
+.contenedor .main .navvisible .closebtn {
+    position: absolute;
+    text-decoration: none;
+    top: 0;
+    right: 25px;
+    font-size: 60px;
+    margin-left: 50px;
+    /*width: 10px;*/
+    color: var(--col-fon-subcont);
+}
+/*
+.contenedor .main .navvisible h2 {
+    margin: 5%;
+    padding:5%;
+    font-size: 1.8em;
+}
+*/
+.contenedor .main .navvisible ul {
+    list-style: none;
+    margin-top: 1%;
+    /*display: none;*/
+}
+
+.contenedor .main .navvisible ul li {
+    padding: 2%;
+    margin: 3%;
+}
+
+.contenedor .main .navvisible ul li a {
+    margin: 1%;
+    padding: 8px 8px;
+    /*display: block;*/
+    color:var(--col-fon-subcont);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: 1s;
+    
+}
+
+.contenedor .main .navvisible ul li a.active {
+    color: var(--col-tex-activo);
+    text-shadow: 1px 1px 2px black, 2px 2px 10px blue, 0.5px 0.5px 10px darkblue;
+
+}
+
+.contenedor .main .navvisible ul li a:hover {
+    background:var(--col-fon-articulo);
+}
+
+/*    S  E  C  C  I  O  N     P  R  I  N  C  I  P  A  L    */
+
+.contenedor .main {
+    /*background: var(--col-texto);*/
+    /*width:83%;
+    max-width: 84%;*/
+    margin: 0.1%;
+    /*display: block;*/
+    
+    grid-area: main;
+    transition: margin-left .5s;
+    padding: 0.2%;
+    /*position: relative;*/
+}
+
+
+
+
+
+.contenedor .main .articles {
+    /*margin: 0.2%;*/
+    padding: 2%;
+    background: var(--col-fon-articulo);
+}
+
+.contenedor .main .articles article {
+    display: block;
+    /*float: left;*/
+    padding: 0.5%;
+    margin: 0.2%;
+    background:var(--col-fon-articulo);
+    margin-bottom: 1%;
+
+    
+    
+}
+/*
+.contenedor .main .articles h2 {
+    color: var(--col-fon-subcont);
+}
+*/
+.contenedor .main .articles .articulo .figura .imagen {
+    /*display: block;*/
+    
+    width: 30%;
+    /*margin: 0 auto;*/
+    height: auto;
+}
+/*
+.contenedor .main .articles article h2 {
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    padding: 0.2%;   
+    color: var(--col-fon-subcont); 
+    font-size: 1.8em;
+}
+*/
+.contenedor .main .articles article figure figcaption {
+    /*display: block;*/
+    margin: 1% auto;
+    /*text-align: left;
+    float: left;*/
+    font-size: 1.2em;
+    width: 30%;
+}
+/*
+.contenedor .main .articles article figure img {
+    width: 30%;
+    height: 30%;
+}
+*/
+/*
+.contenedor .main .articles button {
+    display: block;
+    margin: 5% auto;
+    padding: 2%;
+    background:rgb(59, 21, 16);
+    color:rgb(194, 221, 207);
+}
+*/
+figcaption {
+    color: var(--col-fondo-cont);
+}
+/*    S  E  C  C  I  O  N     C  O  M  P  L  E  M  E  N  T  A  R  I  A    */
+
+.contenedor .aside {
+    /*background: #393e46;*/
+    background-image: url(../carmaterial/carimagenes/fondo.jpg);
+    background-attachment: fixed;
+    grid-area: aside;
+    /*margin: 0 0.1% 0.1% 0;*/
+    position: fixed;
+    top: 24%;
+    right: 0;
+    width: 20.4%;
+    height: 130%;
+    transition: 0.5s;
+
+}
+
+.contenedor .aside .icon-bar {
+    position: fixed;
+    top: 55%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.contenedor .aside .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: rgb(132, 190, 132);
+    font-size: 20px;
+
+}
+
+.contenedor .aside .icon-bar a hover {
+    background-color: rgb(31, 43, 9);    
+}
+
+ .facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .content {
+    margin-left: 75px;
+    font-size: 30px;
+  }
+
+.contenedor .aside h2, .contenedor .aside h3 {
+    text-align: center;
+    margin: 18% 2% 8% 2%;
+    color:var(--col-fon-subcont);
+}
+
+
+/*
+.contenedor .aside .deco {
+    display: block;
+    color: var(--col-fon-subcont);
+    padding: 5%;
+    margin: 5%;
+}
+*/
+.contenedor .aside ul li {
+    list-style: none;
+
+}
+.contenedor .aside ul li a {
+    text-decoration: none;
+    display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: 1s;
+
+    padding: 3%;
+    margin: 3%;
+    color:var(--col-fon-subcont);
+}
+
+.contenedor .aside ul li a:hover {
+    background:var(--col-fon-articulo);
+}
+
+/*     D  I  S  E  Ñ  O    A  D  A  P  T  A  B  L  E    */
+
+@media screen and (max-width: 480px) {
+.contenedor {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:    "header    header"
+                            "nav       nav"
+                            "main     main"
+                            "aside    aside ";
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.contenedor .header .nombre-web {
+    background-color: var(--col-fon-subcont);
+} 
+
+.contenedor .header span {
+    display: none;
+}
+
+.contenedor .main .navvisible {
+    width: 100%;
+    position: static;
+}
+
+.contenedor .main .articles .articulo .figura .imagen {
+    width: 85%;
+}
+
+.contenedor .main .articles article figure figcaption {
+    width: 85%;
+}
+
+.contenedor .aside {
+    position: static;
+    width: 100%;
+}
+
+.contenedor .header {
+    display: grid;
+    
+    grid-area: header;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:    "logotipo logotipo"
+                            "nombre-web nombre-web"
+                            "comparte comparte";
+    position: sticky;
+    top: 0;
+    
+    padding: .1%;
+    background: var(--col-fon-subcont);
+    position: relative;
+}
+
+}

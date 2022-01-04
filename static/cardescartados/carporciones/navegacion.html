@@ -1,0 +1,75 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="routes.js"></script>
+    <link rel="stylesheet" href="../carestilos/estiprincipal.css">
+    <link href="//fonts.googleapis.com/css?family=Great Vibes&subset=latin" rel="stylesheet" type="text/css">
+    <!--    T  I  T  U  L  O    -->
+    <title>Home</title>
+
+</head>
+
+
+<body>
+
+    <div class="contenedor">
+
+       
+
+
+        <!--<div class="nav">   */--> 
+            <h2>  Menú de navegación  </h2>
+            <input type="text" id="mySearch" onkeyup="fbusqueda()" placeholder="Search.." title="Type in a category">
+            <ul id="myMenu">
+                <li><a class="active" href="principal.html">Home</a></li>
+
+                <li><a href="carestancias/fachada.html">Fachada</a></li>
+                <li><a href="carestancias/ventanas.html">Ventanas</a></li>
+                <li><a href="carestancias/detalles.html">Detalles</a></li>
+                <li><a href="carestancias/salon.html">Salón</a></li>
+                <li><a href="carestancias/cocina.html">Cocina</a></li>
+                <li><a href="carestancias/dormatrim.html">Dormitorio de matrimonio</a></li>   
+                <li><a href="carestancias/dorinfan.html">Dormitorio infantil</a></li>   
+                <li><a href="carestancias/buardilla.html">Buardilla</a></li>    
+                <li><a href="carestancias/patio.html">Patio</a></li>
+                <li><a href="carestancias/aseo.html">Aseo</a></li>
+                <li><a href="carestancias/helipuerto.html">Helipuerto</a></li></br>
+            </ul>    
+        <!--</div>      class nav     -->     
+
+
+
+        
+
+    </div>  <!--   class contenedor    -->
+
+
+    <script>
+      
+
+        function fbusqueda() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("mySearch");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myMenu");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }     
+    </script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,268 @@
+:root {
+    /*
+    --color-fondo: rgb(250, 190, 200);
+    
+    
+    --col-fon-subcont: rgb(59, 21, 16);
+    */
+    --color-fondo: rgb(250, 190, 200);
+    --col-fondo-cont: rgb(112, 19, 7);
+    --col-texto: rgb(247, 199, 144);
+    --col-fon-subcont: rgb(94, 35, 27);
+    --col-fon-articulo:rgb(248, 203, 120);
+    --col-tex-activo: rgb(252, 89, 89);
+}
+
+* {box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Great Vibes', sans-serif;
+}
+
+body{
+    background-color: var(--col-fondo);
+    font-size: 1.4em;
+    /*display: grid;*/
+    
+    
+}
+
+/*    R  E  G  I  L  L  A    */
+
+
+.contenedor {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:    "header    header   header  header  header"
+                            "nav       columna  columna columna aside";
+    text-align: center;
+}
+
+/*    C  A  B  E  C  E  R  A    */
+.contenedor .header {
+    display: grid;
+    /*background: #ff8000;*/
+    /*grid-column-start: header;
+    grid-column-end: header;*/
+    grid-area: header;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:    "logotipo nombre-web nombre-web nombre-web comparte";
+                            
+    position: sticky;
+    top: 0;
+    
+    padding: 1%;
+    background: var(--col-fon-subcont);
+    
+}
+
+.contenedor .header .logotipo {
+    
+    grid-area: logotipo;
+    padding: 5%;
+    /*float: left;*/
+}
+
+.contenedor .header .nombre-web {
+    
+    grid-area: nombre-web;
+    padding: 2%;
+    color: var(--col-texto);
+    font-size: 1.6em;
+    /*width: auto;*/
+
+}
+
+.contenedor .header .comparte {
+    /*background: rgb(255, 255, 255);*/
+    grid-area: comparte;
+    padding: 5%;
+    /*width: 11%;*/
+    box-shadow: 4px 10px 10px 4px rgb(245, 223, 96), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 10px;
+    float: right;
+    color: var(--col-texto);
+    
+    
+}
+
+.contenedor .header .comparte .texto {
+    text-align: center;
+    padding: 12px 8px 0px;
+}
+
+.contenedor .header .comparte a {
+    text-decoration: none;
+    color: var(--col-texto);
+}
+
+.contenedor .header .nombre-web h3 {
+    text-align: right;
+    margin-right: 25%;
+    /*display: block;*/
+}
+
+.contenedor .header .nombre-web p {
+    text-align: left;
+    margin-left: 20%;
+}
+
+.contenedor .header .nombre-web a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--col-texto);
+}
+
+
+
+/*    M  E  N  U    N  A  V  E  G  A  C  I  O  N    */
+
+.contenedor .nav {
+    /*background: green;*/
+    grid-area: nav;
+    /*background-color:rgb(246, 244, 243);*/
+    background-image: url(../carmaterial/carimagenes/fondo.jpg);
+    background-attachment: fixed;
+    
+    color: var(--col-fon-subcont);
+    margin: 0.5%;
+    
+
+}
+
+.contenedor .nav h2 {
+    margin: 5%;
+    padding:5%;
+    font-size: 1.8em;
+}
+
+.contenedor .nav ul {
+    list-style: none;
+    margin-top: 5%;
+}
+
+.contenedor .nav ul li {
+    padding: 5%;
+    margin: 5%;
+}
+
+.contenedor .nav ul li a {
+    margin: 10px;
+    padding: 10px 20px;
+    /*display: block;*/
+    color:var(--col-fon-subcont);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1em;
+    
+}
+
+.contenedor .nav ul li a.active {
+    color: var(--col-tex-activo);
+}
+
+.contenedor .nav ul li a:hover {
+    background:var(--col-fon-articulo);
+}
+
+/*    S  E  C  C  I  O  N     P  R  I  N  C  I  P  A  L    */
+
+.contenedor .columna {    
+    grid-area: columna;
+    display: grid;
+    /*grid-gap: 5px;*/
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:    "apartado" "apartado" "apartado";
+    background: var(--col-texto);
+    width:99%;
+    height: 50%;
+    /*max-width: 90%;*/
+    /*margin: 0.5% 0%;*/
+    /*display: block;*/
+    
+
+}
+
+.contenedor .columna > div .apartado {
+    grid-area: apartado;
+    margin: 1% 1% 0 1%;
+    padding: 20% 10%;
+    height: 98%;
+    background: var(--col-fondo-cont);
+    
+}
+
+.contenedor .columna > div a .apartado h2{
+    text-decoration: none;
+    color: var(--col-texto);
+}
+
+
+/*    S  E  C  C  I  O  N     C  O  M  P  L  E  M  E  N  T  A  R  I  A    */
+
+.contenedor .aside {
+    /*background: #393e46;*/
+    background-image: url(../carmaterial/carimagenes/fondo.jpg);
+    background-attachment: fixed;
+    grid-area: aside;
+    margin: 0.5% 0.5% 0.5% 0%;
+}
+
+.contenedor .aside h2, .contenedor .aside h3 {
+    text-align: center;
+    margin: 8% 2% 8% 2%;
+    color:var(--col-fon-subcont);
+}
+
+
+
+.contenedor .aside .deco {
+    display: block;
+    color: var(--col-fon-subcont);
+    padding: 5%;
+    margin: 5%;
+}
+
+
+.contenedor .aside .deco a {
+    text-decoration: none;
+    font-size: 0.8em;
+    color:var(--col-fon-subcont);
+}
+
+.contenedor .aside .deco:hover {
+    background:var(--col-fon-articulo);
+}
+
+/*     D  I  S  E  Ñ  O    A  D  A  P  T  A  B  L  E    */
+
+@media screen and (max-width: 480px) {
+.contenedor {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr ;
+    grid-template-areas:    "header    header"
+                            "nav       nav"
+                            "columna     columna"
+                            "aside    aside ";
+    text-align: center;
+}
+
+.contenedor .header {
+    display: grid;
+    
+    grid-area: header;
+    grid-template-columns: 1fr;
+    grid-template-areas:    "logotipo logotipo"
+                            "nombre-web nombre-web"
+                            "comparte comparte";
+    position: sticky;
+    top: 0;
+    
+    padding: 1%;
+    background: var(--col-fon-subcont);
+    position: relative;
+}
+
+}

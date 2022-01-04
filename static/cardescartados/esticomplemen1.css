@@ -1,0 +1,60 @@
+.contenedor .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "articles articles2 articles3"
+                            "articles4 articles5 articles6"
+                            "articles7 articles9 articles9";
+    grid-gap: 10%;
+    background-color: rgb(41, 62, 63);
+
+}
+
+.contenedor .main .articles {
+    grid-area: articles;
+    /*grid-gap: 1%;*/
+    background-color: cadetblue;
+    /*margin: 2%;*/
+    /*padding: 2%;*/
+}
+
+.contenedor .main .articles2 {
+    grid-area: articles2;
+    /*grid-gap: 1%;*/
+    background-color: cadetblue;
+    margin: 2%;
+}
+
+.contenedor .main .articles3 {
+    grid-area: articles3;
+    /*grid-gap: 1%;*/
+    background-color: cadetblue;
+    margin: 2%;
+}
+
+.contenedor .main .articles4 {
+    grid-area: articles4;
+    /*grid-gap: 1%;*/
+    background-color: cadetblue;
+    margin: 2%;
+}
+
+.contenedor .main .articles5 {
+    grid-area: articles5;
+    /*grid-gap: 1%;*/
+    background-color: cadetblue;
+    margin: 2%;
+}
+
+.contenedor .main .articles6 {
+    grid-area: articles6;
+    /*grid-gap: 1%;*/
+    background-color: cadetblue;
+    padding: 20%;
+}
+
+.contenedor .main .articles7 {
+    grid-area: articles7;
+    /*grid-gap: 1%;*/
+    background-color: cadetblue;
+    margin: 2%;
+}

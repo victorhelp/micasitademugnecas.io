@@ -1,0 +1,100 @@
+:root {
+    --col-fon-articulo:rgb(248, 203, 120);
+    --color-fondo: rgb(250, 190, 200);
+    --col-fondo-cont: rgb(112, 19, 7);
+    --col-texto: rgb(247, 199, 144);
+    --col-fon-subcont: rgb(94, 35, 27);
+    --col-tex-activo: rgb(252, 89, 89);
+    --col-fon-columna: coral;
+}
+
+.contenedor .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "columnas columnas2 columnas3";
+    background-color: var(--col-fon-articulo);
+    height: 50%;
+
+}
+
+.contenedor .main .columnas {
+    display: grid;
+    grid-area: columnas;
+    /*background-color: var(--color-fondo);   */
+
+    margin: 2%;
+    
+}
+
+.contenedor .main .columnas2 {
+    display: grid;
+    grid-area: columnas2;
+    /*background-color: var(--color-fondo);*/
+    margin-top: 2%;
+    margin-bottom: 2%
+}
+
+.contenedor .main .columnas3 {
+    display: grid;
+    grid-area: columnas3;
+
+    /*background-color: var(--color-fondo);*/
+    margin: 2%;
+}
+
+.contenedor .main .columnas a .columna, .contenedor .main .columnas2 a .columna,
+.contenedor .main .columnas3 a .columna {
+    background-color: var(--col-fon-columna);
+    width: 87%;
+    max-width: 88%;
+    /*min-height: 20%;*/
+    height: 85%;
+    padding: 5%;
+    /**margin: 2%;*/
+     
+    
+}
+
+.contenedor .main .columnas a, .contenedor .main .columnas2 a, .contenedor .main .columnas3 a {
+    text-decoration: none;
+    color:rgb(112, 19, 7);
+
+}
+/*
+.contenedor .main .columnas a.active, .contenedor .main .columnas2 a.active, .contenedor .main .columnas3 a.active{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+/*
+
+.contenedor .main .columnas4 {
+    grid-area: columnas4;
+    background-color: cadetblue;
+    margin: 2%;
+}
+
+.contenedor .main .columnas5 {
+    grid-area: columnas5;
+    background-color: cadetblue;
+    margin: 2%;
+}
+
+.contenedor .main .columnas6 {
+    grid-area: columnas6;
+    background-color: cadetblue;
+    padding: 20%;
+}
+
+.contenedor .main .columnas7 {
+    grid-area: columnas7;
+    background-color: cadetblue;
+    margin: 2%;
+}
